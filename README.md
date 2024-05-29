@@ -72,8 +72,8 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 ### String
 
 - [X] 1. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
-- [ ] 2. [Valid Anagram](https://leetcode.com/problems/valid-anagram)
-- [ ] 3. [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
+- [X] 2. [Valid Anagram](https://leetcode.com/problems/valid-anagram)
+- [X] 3. [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
 - [ ] 4. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix)
 - [ ] 5. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
 - [ ] 6. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)
