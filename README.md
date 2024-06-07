@@ -11,7 +11,7 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 - [X] 2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - [X] 3. [Majority Element](https://leetcode.com/problems/majority-element)
 - [X] 4. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
-- [ ] 5. [Meeting Rooms](https://leetcode.com/problems/meeting-rooms)
+- [ ] 5. [Meeting Rooms (Premium)](https://leetcode.com/problems/meeting-rooms)
 - [X] 6. [Move Zeroes](https://leetcode.com/problems/move-zeroes)
 - [X] 7. [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)
 - [X] 8. [Insert Interval](https://leetcode.com/problems/insert-interval)
@@ -26,10 +26,10 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 - [X] 17. [Rotate Array](https://leetcode.com/problems/rotate-array)
 - [X] 18. [Contiguous Array](https://leetcode.com/problems/contiguous-array)
 - [X] 19. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)
-- [ ] 20. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii)
+- [ ] 20. [Meeting Rooms II(Premium)](https://leetcode.com/problems/meeting-rooms-ii)
 - [X] 21. [3Sum Closest](https://leetcode.com/problems/3sum-closest)
 - [X] 22. [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)
-- [ ] 23. [Employee Free Time](https://leetcode.com/problems/employee-free-time)
+- [ ] 23. [Employee Free Time(Premium)](https://leetcode.com/problems/employee-free-time)
 - [ ] 24. [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum)
 
 ---
@@ -82,7 +82,7 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 - [X] 9. [Group Anagrams](https://leetcode.com/problems/group-anagrams)
 - [X] 10. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement)
 - [X] 11. [Largest Number](https://leetcode.com/problems/largest-number)
-- [ ] 12. [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings)
+- [ ] 12. [Encode and Decode Strings(Premium)](https://leetcode.com/problems/encode-and-decode-strings)
 - [ ] 13. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)
 - [ ] 14. [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs)
 
