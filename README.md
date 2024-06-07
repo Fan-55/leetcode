@@ -81,7 +81,7 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 - [X] 8. [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string)
 - [X] 9. [Group Anagrams](https://leetcode.com/problems/group-anagrams)
 - [X] 10. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement)
-- [ ] 11. [Largest Number](https://leetcode.com/problems/largest-number)
+- [X] 11. [Largest Number](https://leetcode.com/problems/largest-number)
 - [ ] 12. [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings)
 - [ ] 13. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)
 - [ ] 14. [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs)
