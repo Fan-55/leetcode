@@ -36,7 +36,7 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 ### Stack
 
 - [X] 1. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
-- [ ] 2. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
+- [X] 2. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
 - [ ] 3. [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare)
 - [ ] 4. [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 - [ ] 5. [Min Stack](https://leetcode.com/problems/min-stack)
