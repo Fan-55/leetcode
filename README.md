@@ -41,7 +41,7 @@ This repo stores my solutions to the leetcode problems. Currently, I'm working o
 - [X] 4. [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 - [X] 5. [Min Stack](https://leetcode.com/problems/min-stack)
 - [X] 6. [Daily Temperatures](https://leetcode.com/problems/daily-temperatures)
-- [ ] 7. [Decode String](https://leetcode.com/problems/decode-string)
+- [X] 7. [Decode String](https://leetcode.com/problems/decode-string)
 - [ ] 8. [Asteroid Collision](https://leetcode.com/problems/asteroid-collision)
 - [ ] 9. [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii)
 - [ ] 10. [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)
