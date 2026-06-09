@@ -5,23 +5,18 @@
 using namespace std;
 
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-      unordered_map<int, int> number_to_index_map;
-      vector<int> answer;
-      for (int index = 0; index < nums.size(); index++) {
-        int diff = target - nums[index]; /// diff is the value of another number
-        /// if another number is in the map
-        if (number_to_index_map.find(diff) != number_to_index_map.end()) {
-          answer.push_back(index);
-          answer.push_back(number_to_index_map.at(diff));
-          break;
-        } else { /// insert current number to the map
-          number_to_index_map.insert({nums[index], index});
-        }
+ public:
+  vector<int> twoSum(vector<int>& nums, int target) {
+    unordered_map<int, int> num_to_index_map;
+    for (int i = 0; i < nums.size(); i++) {
+      int diff = target - nums.at(i);
+      if (num_to_index_map.contains(diff)) {
+        return {i, num_to_index_map.at(diff)};
       }
-      return answer;
+      num_to_index_map.insert({nums.at(i), i});
     }
+    return {};
+  }
 };
 
 int main() {
