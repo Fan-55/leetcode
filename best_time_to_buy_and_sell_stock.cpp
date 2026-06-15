@@ -1,37 +1,33 @@
 #include <vector>
+#include <algorithm>
+#include <iostream>
 
 using namespace std;
 
 class Solution {
-public:
+  public:
     int maxProfit(vector<int>& prices) {
-      int left_ptr = 0;
-      int right_ptr = 1;
       int max_profit = 0;
-      while(right_ptr < prices.size()) {
-        int selling_price = prices.at(right_ptr);
-        int buying_price = prices.at(left_ptr);
-        if (selling_price > buying_price) {
-          int current_profit = selling_price - buying_price;
-          max_profit = current_profit > max_profit ? current_profit : max_profit;
+      int l_ptr = 0;
+      for (int r_ptr = 1; r_ptr < prices.size(); r_ptr++) {
+        int buy_price = prices.at(l_ptr);
+        int sell_price = prices.at(r_ptr);
+        if (sell_price < buy_price) {
+          l_ptr = r_ptr;
         } else {
-          left_ptr = right_ptr;
+          int current_profit = sell_price - buy_price;
+          max_profit = max(current_profit, max_profit);
         }
-        right_ptr++;
-      }
+      } 
       return max_profit;
     }
 };
 
-class Solution2 {
-public:
-    int maxProfit(vector<int>& prices) {
-      int min_price = prices[0];
-      int max_profit = 0;
-      for(int i =1; i < prices.size(); i++) {
-        max_profit = (prices[i] - min_price) > max_profit ? (prices[i] - min_price) : max_profit;
-        min_price = prices[i] < min_price? prices[i]: min_price;
-      }
-      return max_profit;
-    }
-};
+int main () {
+  vector<int> prices = { 7,1,5,3,6,4 };
+  Solution s;
+  int result = s.maxProfit(prices);
+  cout << "expected max profix = 5" << endl;
+  cout << "max profit is " << result << endl;
+  return 0;
+}
