@@ -5,14 +5,14 @@ using namespace std;
 
 class Solution {
 public:
-    bool containsDuplicate(vector<int> &nums) {
-      unordered_set<int> hash_set{};
-      for (int num: nums) {
-        if (hash_set.count(num) > 0) {
-          return true;
-        }
-        hash_set.insert(num);
+  bool containsDuplicate(vector<int>& nums) {
+    unordered_set<int> set;
+    for (int i = 0; i < nums.size(); i++) {
+      if (set.contains(nums.at(i))) {
+        return true;
       }
-      return false;
+      set.insert(nums.at(i));
     }
+    return false;
+  }
 };
