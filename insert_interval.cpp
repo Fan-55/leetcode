@@ -1,39 +1,59 @@
 #include <vector>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
 class Solution {
 public:
     vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-      vector<vector<int>> result;
-      for (int i = 0; i < intervals.size(); i++) {
-        /// new interval is before current interval => insert new interval and rest of the intervals to the result
-        //        |----|       current interval
-        // |----|              new interval
-        if (newInterval[1] < intervals[i][0]) {
-          result.push_back(newInterval);
-          vector<vector<int>>::iterator it = intervals.begin() + i;
-          result.insert(result.end(), it, intervals.end());
-          return result;
-        }
-        /// new interval is after current interval => insert current interval to the result since there is nothing we can do about it
-        // |----|                   current interval
-        //          |----|          new interval
-        else if (newInterval[0] > intervals[i][1]) {
-          result.push_back(intervals[i]);
-        }
-        /// new interval is overlapping current interval => merge interval by getting smaller head and bigger tail
-        ///  |----|          current interval
-        ///     |----|       possible new interval 1
-        /// |---------|      possible new interval 2
-        /// |----|           possible new interval 3
-        else {
-          newInterval[0] = min(newInterval[0], intervals[i][0]);
-          newInterval[1] = max(newInterval[1], intervals[i][1]);
+      vector<int> intervalToInsert = newInterval;
+      vector<vector<int>> ans;
+      for (vector<int> interval : intervals) {
+        if (intervalToInsert.size() == 2) {
+          int start = interval.at(0);
+          int end = interval.at(1);
+          int newStart = intervalToInsert.at(0);
+          int newEnd = intervalToInsert.at(1);
+          bool shouldMerge = newStart <= end && (newEnd >= end || newEnd >= start) ;
+          bool shouldInsert = newEnd < start;
+          if (shouldMerge) {
+            intervalToInsert = {min(start, newStart), max(end, newEnd)};
+          } else if (shouldInsert) {
+            ans.push_back(intervalToInsert);
+            ans.push_back(interval);
+            intervalToInsert.clear();
+          } else {
+            ans.push_back(interval);
+          }
+        } else {
+          ans.push_back(interval);
         }
       }
-      result.push_back(newInterval);
-      return result;
+      if (intervalToInsert.size()) {
+        ans.push_back(intervalToInsert);
+      }
+      return ans;
     }
 };
+
+void printer(vector<vector<int>>& intervals, vector<int>& newInterval) {
+  Solution s;
+  vector<vector<int>> ans = s.insert(intervals, newInterval);
+  cout << "inserted result : [";
+  for (vector<int> interval: ans) {
+    cout << "[" << interval.at(0) << ", " << interval.at(1) << "]";
+  }
+  cout << " ]" << endl;;
+}
+
+int main () {
+  vector<vector<int>> intervals = {{1, 3}, {6, 9}};
+  vector<int> newInterval ={2,5};
+  printer(intervals, newInterval);
+
+  intervals = {{1, 2}, {3, 5}, {6, 7}, {8, 10}, {12, 16}};
+  newInterval ={4, 8};
+  printer(intervals, newInterval);
+  return 0;
+}
